@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.get('/api/users', function(req, res, next){
     console.log(userCtrl.getUsers(req.query))
-    res.status(200).send(userCtrl.getUsers(req.query))
+    res.status(200).json(userCtrl.getUsers(req.query))
   });
 
 app.get('/api/users/:userId', function(req, res, next){

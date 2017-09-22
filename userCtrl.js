@@ -18,9 +18,10 @@ module.exports = {
            
           var users = []
           for(var i = 0; i < userData.length; i++){
-            if(query.age == userData[i].age){
+            if(query.age > userData[i].age){
               users.push(userData[i])
             }
+            console.log(users)
           }
           return users
         }
@@ -34,10 +35,10 @@ module.exports = {
           return users
         }
         else if(query.email){
-          var user;
+          var user =[];
           for(var i = 0; i < userData.length; i++){
             if(query.email === userData[i].email){
-              user = userData[i]
+              user[0] = userData[i]
             }
           }
           return user
